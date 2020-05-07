@@ -16,7 +16,7 @@ class Executor {
 
         $executable = sprintf(
             '%s %s',
-            escapeshellarg($commandFilename->asString()),
+            escapeshellcmd($commandFilename->asString()),
             $argLine
         );
         exec($executable, $output, $rc);
